@@ -1,0 +1,15 @@
+.tasks{
+    display: flex;
+    /*flex: 1;*/
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: blue;
+}
+.tasks_list{
+    justify-content: flex-start;
+    background-color: blue;
+}
+.tasks_icons{
+    justify-content: flex-end;
+    background-color: green;
+}

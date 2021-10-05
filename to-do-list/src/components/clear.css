@@ -1,0 +1,11 @@
+.clear_button {
+    color: greenyellow;
+    border-color: greenyellow;
+    background-color: white;
+}
+.clear{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
