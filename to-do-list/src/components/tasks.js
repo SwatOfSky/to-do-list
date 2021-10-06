@@ -14,6 +14,20 @@ export default function Tasks() {
 
         setTasks(newTask);
     };
+    
+
+    const updateTask = (taskId, newValue) => {
+        if (!newValue.text || /^\s*$/.test(newValue.text)) {
+            return;
+    }
+        setTasks(prev => prev.map(item => (item.id === taskId ? newValue : item)))
+    }
+
+
+    const removeTask = id => {
+        const removeArr = [...tasks].filter(task => task.id !== id)
+        setTasks(removeArr)
+    }
 
     const completeTask = id => {
         let updatedTasks = tasks.map(task => {
@@ -27,9 +41,7 @@ export default function Tasks() {
 
 
     return <div className='tasks'>
-        <div className='tasks_list'>Tasks</div>
-        <div className='tasks_icons'>Icons</div>
         <Adding onSubmit={addTask} />
-        <Task />
+        <Task tasks={tasks} completeTask={completeTask} removeTask={removeTask} updateTask={updateTask}/>
     </div>
 }

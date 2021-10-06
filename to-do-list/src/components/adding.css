@@ -1,6 +1,11 @@
 .adding{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     color: greenyellow;
+    background-color: lightgray;
 }
+
+/*.adding_input{*/
+/*    width: 90%;*/
+/*}*/

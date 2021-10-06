@@ -1,5 +1,5 @@
 .header{
-    /*display: flex;*/
+   background-color: lightgray;
 }
 .header_text{
     display: flex;
