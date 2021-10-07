@@ -1,5 +1,37 @@
 .complete {
     text-decoration: line-through;
     opacity: 0.3;
-    background-color: lightgray;
+    background-color: #EEE1F0;
+}
+.task-row {
+    background-color: #EEE1F0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    font-family: "Lato";
+    font-size: 25px;
+
+}
+.task-row complete{
+    background-color: #EEE1F0;
+}
+.icons{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.icon-star{
+    color: gold;
+}
+.icon-edit {
+    color: aquamarine;
+}
+.icon-done {
+    color: yellowgreen;
+}
+.icon-close{
+    color: indianred;
 }

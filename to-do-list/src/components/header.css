@@ -1,13 +1,21 @@
 .header{
-   background-color: lightgray;
-}
-.header_text{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+   background-color: #EEE1F0;
 }
 .header_search{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    box-sizing: border-box;
+    height: 50px;
+    padding-right: 147px;
+    padding-bottom: 10px;
+}
+.header_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Lato";
+    font-size: 25px;
+    padding-top: 20px;
+
 }

@@ -1,12 +1,18 @@
 .clear_button {
-    color: greenyellow;
-    border-color: greenyellow;
-    background-color: white;
+    color: mediumseagreen;
+    border-color: mediumseagreen;
+    background-color: #EEE1F0;
+    height: 40px;
+    width: 130px;
+    font-size: 24px;
+    font-family: "Lato";
 }
 .clear{
+    padding-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex: 1;
-    background-color: lightgray;
+    background-color: #EEE1F0;
+    padding-bottom: 25px;
 }

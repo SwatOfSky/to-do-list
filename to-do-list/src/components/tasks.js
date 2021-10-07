@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './tasks.css'
 import Adding from "./adding";
 import Task from "./Todo";
+import {AiFillStar, AiOutlineStar} from "react-icons/all";
 
 export default function Tasks() {
     const [tasks, setTasks] = useState([]);
@@ -28,6 +29,14 @@ export default function Tasks() {
         const removeArr = [...tasks].filter(task => task.id !== id)
         setTasks(removeArr)
     }
+
+    // const changePriority = id => {
+    //     let updatedTasks = tasks.map(task => {
+    //         if (task.priority === true) {
+    //             task.isPriority = !task.isPriority
+    //         }
+    //     })
+    // }
 
     const completeTask = id => {
         let updatedTasks = tasks.map(task => {

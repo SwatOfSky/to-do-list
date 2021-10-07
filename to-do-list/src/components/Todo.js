@@ -7,26 +7,24 @@ import {AiOutlineCloseCircle} from 'react-icons/ai';
 import Adding from "./adding";
 import './Todo.css'
 
-export default function Task({ tasks, completeTask, removeTask, updateTask, props}){
+export default function Task({ tasks, completeTask, removeTask, updateTask}){
     const [edit, setEdit] = useState({
         id: null,
         value: '',
-        rating: false
     });
-
-    const onChange = {tasks , props };
 
     const submitUpdate = value => {
         updateTask(edit.id, value)
         setEdit({
             id: null,
-            value: ''
+            value: '',
         })
     }
 
     if (edit.id) {
         return <Adding edit={edit} onSubmit={submitUpdate} />
     }
+    console.log(Task)
 
 let testTwo;
  testTwo = tasks.map((task, index) => (
@@ -38,20 +36,21 @@ let testTwo;
                 {task.text}
             </div>
             <div className='icons'>
-                <div onClick={() => onChange(task.key, 'rating')}>
-                    {task.rating ? <AiFillStar /> : <AiOutlineStar /> }
-                </div>
-                <MdOutlineTaskAlt
-                onClick={() => completeTask(task.id)}
+                <div className="icon-star">   <AiOutlineStar
+                // onClick={ () => }
                 />
-                <BiEdit
+                </div>
+                <div className="icon-done"><MdOutlineTaskAlt
+                onClick={() => completeTask(task.id)}
+                /></div>
+            <div className="icon-edit"><BiEdit
                 onClick={() => setEdit({id: task.id, value: task.text})}
                 className='edit-icon'
-                />
-                <AiOutlineCloseCircle
+                /></div>
+            <div className="icon-close"><AiOutlineCloseCircle
                 onClick={() => removeTask(task.id)}
                 className='delete-icon'
-                />
+                /></div>
             </div>
         </div>
     ));

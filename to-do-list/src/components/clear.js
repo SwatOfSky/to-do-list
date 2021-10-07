@@ -6,7 +6,7 @@ export default function Clear(props){
 
     return (
         <div className='clear'>
-        <button onClick={clearAll}>Clear items</button>
+        <button className='clear_button' onClick={clearAll}>Clear items</button>
     </div>
     )
 }

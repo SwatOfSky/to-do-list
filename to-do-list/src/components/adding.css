@@ -3,9 +3,23 @@
     flex-direction: column;
     justify-content: center;
     color: greenyellow;
-    background-color: lightgray;
-}
+    background-color: #EEE1F0;
+    height: 50px;
+    box-sizing: border-box;
+    width: 100%;
 
-/*.adding_input{*/
-/*    width: 90%;*/
-/*}*/
+}
+.adding_input{
+    height: 42px;
+    border: 3px solid mediumseagreen;
+    width: 70%;
+}
+.formButton{
+    height: 50px;
+    border: 3px solid mediumseagreen;
+    border-left: none;
+    width: 10%;
+    background-color: #EEE1F0;
+    color: mediumseagreen;
+;
+}

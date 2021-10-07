@@ -18,12 +18,11 @@ export default function Adding(props) {
         evt.preventDefault();
         props.onSubmit({
             id: Math.floor(Math.random() * 10000),
-            text: input
+            text: input,
+            priority: false
         });
         setInput('');
     };
-
-
 
     return <div className='adding'>
         <form onSubmit={handleSubmit}>
@@ -35,8 +34,9 @@ export default function Adding(props) {
                    onChange={handleChange}
                    ref={inputRef}
                    maxLength="50"
+
             />
-        <button>Add Item </button>
+        <button className='formButton'>Add Item </button>
         </form>
 
     </div>
