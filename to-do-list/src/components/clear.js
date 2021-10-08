@@ -1,12 +1,15 @@
 import './clear.css'
 import React from 'react'
+import Tasks from './tasks'
 
-export default function Clear(props){
-    const { clearAll } = props;
+
+export default function Clear(){
+    // const clearAll = () => setTasks([]) ;
+
 
     return (
         <div className='clear'>
-        <button className='clear_button' onClick={clearAll}>Clear items</button>
+        <button className='clear_button'>Clear items</button>
     </div>
     )
 }

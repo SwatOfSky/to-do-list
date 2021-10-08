@@ -3,6 +3,8 @@ import './tasks.css'
 import Adding from "./adding";
 import Task from "./Todo";
 import {AiFillStar, AiOutlineStar} from "react-icons/all";
+import clear from "./clear";
+
 
 export default function Tasks() {
     const [tasks, setTasks] = useState([]);
@@ -15,7 +17,8 @@ export default function Tasks() {
 
         setTasks(newTask);
     };
-    
+
+
 
     const updateTask = (taskId, newValue) => {
         if (!newValue.text || /^\s*$/.test(newValue.text)) {
@@ -38,6 +41,12 @@ export default function Tasks() {
     //     })
     // }
 
+    const clearState = () => {
+        setTasks(...tasks );
+    };
+
+
+
     const completeTask = id => {
         let updatedTasks = tasks.map(task => {
             if (task.id === id) {
@@ -52,5 +61,6 @@ export default function Tasks() {
     return <div className='tasks'>
         <Adding onSubmit={addTask} />
         <Task tasks={tasks} completeTask={completeTask} removeTask={removeTask} updateTask={updateTask}/>
+        <button onClick={clearState}>Delete</button>
     </div>
 }
